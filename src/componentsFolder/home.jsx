@@ -12,10 +12,12 @@ import{MdBedroomParent,MdBathroom} from 'react-icons/md'
 import { useContext } from "react";
 import { OpenModalContext } from "./context";
 import {HideOn} from 'react-hide-on-scroll'
- import { ThreeDots } from "react-loader-spinner"; 
- import {FaExclamationCircle} from 'react-icons/fa'
+import { ThreeDots } from "react-loader-spinner"; 
+import {FaExclamationCircle} from 'react-icons/fa'
+//import the splash components
 
- import Footer from "./footer";
+
+import Footer from "./footer";
 import { useState } from "react";
 
 const Home=()=>{
