@@ -64,6 +64,25 @@
     margin-bottom: 15%;
   }
   
+  .splash-page {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .splash-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #96abd4;
+    background-image: url('./componentsFolder/Images/bg.jpg');
+    background-position: center;
+    background-size: cover;
+    filter: blur(4px);
+    z-index: -1;
+  }
   
   @keyframes fade-in {
     0% {
