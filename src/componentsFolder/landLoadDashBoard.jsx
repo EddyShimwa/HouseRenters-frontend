@@ -18,7 +18,6 @@ import { OpenModalContext } from "./context";
 import Chart from 'react-apexcharts';
 import houseImage from './Images/house0.png'
 import { useState } from "react";
-import {HideOn} from 'react-hide-on-scroll'
 import { AiOutlineHome} from 'react-icons/ai'
 import { CiLocationOn } from 'react-icons/ci';
 import{MdBedroomParent,MdBathroom} from 'react-icons/md'

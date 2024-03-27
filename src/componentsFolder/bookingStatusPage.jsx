@@ -29,7 +29,7 @@ function Copyright(props) {
     <Typography style={{  position:'absolute',bottom:5,left:0,right:0}} variant="body2" color="text.secondary" align="center" {...props}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        whereToStay
+        scholarznid
       </Link>{' '}
       {new Date().getFullYear()}
       {'.'}
