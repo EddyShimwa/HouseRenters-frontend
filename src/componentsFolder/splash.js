@@ -15,7 +15,7 @@ const SplashPage = () => {
       className="splash-page h-screen flex flex-col items-center justify-center "
     >
   <div className="flex items-center mb-2">
-  <h2 className="text-8xl text-white mr-1 font-bold mt-6">SCHOLAR</h2>
+  <h2 className="text-8xl text-white mr-1 font-bold mt-6">SCHOLARZ</h2>
   <img src={logo} alt="Logo" className="mx-2" />
   <h2 className="text-8xl text-white ml-1 font-bold mt-6">NID</h2>
 </div>
