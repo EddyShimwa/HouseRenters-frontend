@@ -13,6 +13,26 @@
   }
 }
 
+.logo-text {
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.logo-img {
+  transition: all 0.3s ease;
+}
+
+.logo:hover .logo-text {
+  color: #0000ff;
+  transform: scale(1.1);
+}
+
+.logo:hover .logo-img {
+  transform: rotate(360deg);
+}
+
+
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -82,6 +102,10 @@
     background-size: cover;
     filter: blur(4px);
     z-index: -1;
+  }
+
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
   }
   
   @keyframes fade-in {

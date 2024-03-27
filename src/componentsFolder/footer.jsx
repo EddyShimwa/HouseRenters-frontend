@@ -56,7 +56,7 @@ const Footer=()=>{
                     </div>
                     <div>:</div>
                     <div>
-                        <span className=" font-txtFontFamily text-txtbodyFontsize font-headerFontWeight leading-txtbodylineHeight tracking-txtbodyLetterspacing">0784792020</span>
+                        <span className=" font-txtFontFamily text-txtbodyFontsize font-headerFontWeight leading-txtbodylineHeight tracking-txtbodyLetterspacing">+250780609878</span>
                     </div>
                 </div>
                 <div className=" space-x-2 flex">
@@ -65,7 +65,7 @@ const Footer=()=>{
                     </div>
                     <div>:</div>
                     <div>
-                        <span className=" font-txtFontFamily text-txtbodyFontsize font-headerFontWeight leading-txtbodylineHeight tracking-txtbodyLetterspacing">wheretostay@gmail.com</span>
+                        <span className=" font-txtFontFamily text-txtbodyFontsize font-headerFontWeight leading-txtbodylineHeight tracking-txtbodyLetterspacing">scholarznid@gmail.com</span>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@ const Footer=()=>{
                 <img src={captionlogo} alt="" />
             </div>
             <div  className="">
-                <span className=" text-center  font-txtFontFamily text-txtbodyFontsize  leading-txtbodylineHeight tracking-txtbodyLetterspacing  font-txtbodyFontWeight">All Right Reserved By <span className="text-txtecolor">WhereToStay ltd 2023</span></span>
+                <span className=" text-center  font-txtFontFamily text-txtbodyFontsize  leading-txtbodylineHeight tracking-txtbodyLetterspacing  font-txtbodyFontWeight">All Right Reserved By <span className="text-txtecolor">ScholarzNID</span></span>
             </div>
             </div>
         </div>

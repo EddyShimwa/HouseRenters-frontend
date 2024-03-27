@@ -16,7 +16,6 @@ import bathroomlogo from "./Images/bathroomlogo.png";
 import Chart from "react-apexcharts";
 import houseImage from "./Images/house0.png";
 import { useState } from "react";
-import { HideOn } from "react-hide-on-scroll";
 import { AiOutlineHome } from "react-icons/ai";
 import { MdBedroomParent, MdBathroom } from "react-icons/md";
 import imglogo from "./Images/imglogo.png";
