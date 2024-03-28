@@ -323,7 +323,7 @@ const LandLoadDashboard=()=>{
             </div> 
             <div className=" w-full">
                <div style={{marginLeft:'540%'}} className=" ">
-               <HideOn atHeight height={3}>
+
              <div id="hide">
              <button id="dropdownNotificationButton" data-dropdown-toggle="dropdownNotification" class="inline-flex items-center text-sm font-medium text-center text-gray-500 hover:text-gray-900 focus:outline-none dark:hover:text-white dark:text-gray-400" type="button"> 
 <svg  class="w-7 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 14 20">
@@ -334,7 +334,7 @@ const LandLoadDashboard=()=>{
 </div>
 </button>
              </div>
-            </HideOn>
+          
                </div>
             </div>
    
