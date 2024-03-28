@@ -24,15 +24,15 @@ import { useContext } from "react";
 import { OpenModalContext } from "./context";
 import { useLocation, useParams } from "react-router-dom";
 // import { AdvancedImage } from "@cloudinary/react";
-// import { Cloudinary } from "@cloudinary/url-gen";
-// import { Image, Transformation, CloudinaryContext } from "cloudinary-react";
+import { Cloudinary } from "@cloudinary/url-gen";
+import { Image, Transformation, CloudinaryContext } from "cloudinary-react";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 // import { Link } from "react-router-dom";
 // import Cookies from "js-cookie";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { BsFillImageFill } from "react-icons/bs";
-// import { FaLocationArrow } from "react-icons/fa";
+import { FaLocationArrow } from "react-icons/fa";
 // import { color } from "@cloudinary/url-gen/qualifiers/background";
 import "../App.css";
 
@@ -498,7 +498,7 @@ const AddnewRental = () => {
               class="block  p-4 text-gray-900 border  border-b-mycolor rounded-lg bg-gray-50 sm:text-md focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             />
           </div>
-          {/* <div className="mb-3 flex space-x-4">
+          <div className="mb-3 flex space-x-4">
   <label
     htmlFor="large-input"
     className="block mb-1 mt-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -520,7 +520,7 @@ const AddnewRental = () => {
   >
     <FaLocationArrow />
   </button>
-</div> */}
+</div>
 
 
 
@@ -621,8 +621,6 @@ const AddnewRental = () => {
     className="w-3/4"
   />
 </div>
-
-
           <div class="mb-6 flex space-x-16">
             <label
               for="large-input"
@@ -673,7 +671,7 @@ const AddnewRental = () => {
                     />
                     {imageURL ? (
                       <img
-                        className="w-full h-full max-w-full max-h-full pb-4" // Add these styles
+                        className="w-full h-full max-w-full max-h-full pb-4" 
                         src={imageURL}
                         alt="Uploaded Image"
                       />

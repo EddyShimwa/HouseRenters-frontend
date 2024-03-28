@@ -320,7 +320,7 @@ const LandLoadDashboard=()=>{
             <div className=" mt-4 w-full mx-8 ">
         <div className=" w-full  flex-1 flex   justify-between  mx-8">
            <div>
-            <img style={{maxWidth:'150px'}} src={logo} alt="" />
+            <img style={{maxWidth:'80px'}} src={logo} alt="" />
             </div> 
             <div className=" w-full">
                <div style={{marginLeft:'540%'}} className=" ">
@@ -340,8 +340,6 @@ const LandLoadDashboard=()=>{
             </div>
    
            </div>
- 
- 
     </div>
    
    </div>
@@ -385,30 +383,18 @@ const LandLoadDashboard=()=>{
    </div>
 </aside>
 
-<div class="p-4  sm:ml-64 flex">
-  <div style={{width:"95%"}} className=" mt-12 border rounded-2xl border-black  ml-24 ">
+<div class="p-2  sm:ml-64 flex">
+  <div style={{width:"85%",}} className=" mt-12 border rounded-2xl border-black  ml-20 ">
     <div className=" ml-32 mt-5 text-mycolor font-txtFontFamily text-dashFontsize font-ttttttxtbodyFontWeight leading-dashLineHeight tracking-dashLetterSpacing">House status</div>
- <div  className="donut flex justify-center ml-16 mt-5 ">
+ <div  className="donut flex justify-center ml-10 mt-8 ">
       <Chart
         options={chartData.options}
         series={chartData.series}
         type="donut"
-        width="380"
+        width="290"
       />
     </div>
     </div>
-    {/* <div style={{width:"47%"}} className=" mt-12 border  rounded-2xl border-black  ml-10">
-    <div className=" ml-20 text-txtbodyFontsize mt-5 text-mycolor font-txtFontFamily  leading-txtbodylineHeight  tracking-txtbodyLetterspacing font-ttttttxtbodyFontWeight  ">Days/views</div>
- <div  className="donut flex justify-center ml-16 mt-5 ">
- <Chart
-    options={LinechartData.options}
-    series={LinechartData.series}
-    type="line"
-    width="500"
-  />
-    </div>
-    </div> */}
-   
 
 </div>
       
@@ -491,9 +477,6 @@ const LandLoadDashboard=()=>{
          </div>
          </div>
       </div>
-    
-    
-   
      
       })
       :<div className="  pl-48 ">
