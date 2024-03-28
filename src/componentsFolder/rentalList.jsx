@@ -11,7 +11,6 @@ import { CiLocationOn } from 'react-icons/ci';
 import{MdBedroomParent,MdBathroom} from 'react-icons/md'
 import { useContext } from "react";
 import { OpenModalContext } from "./context";
-import {HideOn} from 'react-hide-on-scroll'
  import { ThreeDots } from "react-loader-spinner"; 
  import {FaExclamationCircle} from 'react-icons/fa'
  import { useParams } from "react-router-dom";
@@ -343,11 +342,9 @@ const handleMouseLeav=()=>{
         <div className="mt-5 h-full  mx-8">
   <div className="relative h-1/3 ">
     <img className="brightness-50 h-[200px] w-[1250px] " src={bodyPic} alt="" />
-    <HideOn atHeight height={2}>
-   
-     </HideOn>
+
      <div className=" text-white inset-x-0  bottom-28 absolute w-full mt-40">
-     {/* <HideOn atHeight height={1}>
+
     <div className=" flex justify-between border mx-24 py-7 px-7 rounded-lg bg-white mb-[-83px]">
         
         <div>
@@ -440,7 +437,7 @@ const handleMouseLeav=()=>{
     </button>
         </div>
         </div>
-        </HideOn> */}
+
 
      </div>
   </div>
