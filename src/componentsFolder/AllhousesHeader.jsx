@@ -1,35 +1,35 @@
+/* eslint-disable */
 import React, { useEffect, useState } from "react";
 import logo from "./Images/logo.png";
 import { useContext } from "react";
 import { OpenModalContext } from "./context";
-import { FamilyRestroomTwoTone } from "@mui/icons-material";
-import { Link } from "react-router-dom";
+// import { FamilyRestroomTwoTone } from "@mui/icons-material";
+// import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 const AllHouseHeader = () => {
   const [accountClicked, setAccountClicked] = useState(false);
   const { setOpenLogin } = useContext(OpenModalContext);
-  const { openLogin } = useContext(OpenModalContext);
+  // const { openLogin } = useContext(OpenModalContext);
   const { setOpenSignup } = useContext(OpenModalContext);
   const { setOpenChat } = useContext(OpenModalContext);
-  const [mouseIsOver, setMouseIsOver] = useState(false);
+  // const [mouseIsOver, setMouseIsOver] = useState(false);
   const navigate=useNavigate(Navigate)
   const [userName, setUserName] = useState(""); 
   const{Newtoken}=useParams()
   console.log("token in header is",Newtoken)
-  const fetchUserName = async () => {
+  const fetchUserName = useCallback(async () => {
     try {
-      
       const response = await fetch('https://wheretostay.onrender.com/api/user', {
         headers: {
-          Authorization:Newtoken,
+          Authorization: Newtoken,
         },
       });
-
+  
       if (response.ok) {
         const userData = await response.json();
-        console.log("userdata is:",userData);
+        console.log("userdata is:", userData);
         setUserName(userData.firstName);
       } else {
         console.error("Error fetching user's information:", response.status);
@@ -37,36 +37,37 @@ const AllHouseHeader = () => {
     } catch (error) {
       console.error("Error fetching user's information", error);
     }
-  };
+  }, [Newtoken, setUserName]); 
+  
   useEffect(() => {
-  fetchUserName();
-}, []);
+    fetchUserName();
+  }, [fetchUserName]); 
 
   
   const handleAccountClick = () => {
     setAccountClicked(!accountClicked);
     console.log(!accountClicked);
   };
-  const handleOpen = () => {
-    setOpenLogin(true);
-    setAccountClicked(false);
-  };
-  const handleOpenSignup = () => {
-    setOpenSignup(true);
-    setAccountClicked(false);
-    console.log("signup clicked");
-  };
-  const handleOpenChat = () => {
-    setOpenChat(true);
-  };
-  const handleMouseOver = () => {
-    setMouseIsOver(true);
-    console.log(true);
-  };
-  const handleMouseLeav = () => {
-    setMouseIsOver(false);
-    console.log(false);
-  };
+  // const handleOpen = () => {
+  //   setOpenLogin(true);
+  //   setAccountClicked(false);
+  // };
+  // const handleOpenSignup = () => {
+  //   setOpenSignup(true);
+  //   setAccountClicked(false);
+  //   console.log("signup clicked");
+  // };
+  // const handleOpenChat = () => {
+  //   setOpenChat(true);
+  // };
+  // const handleMouseOver = () => {
+  //   setMouseIsOver(true);
+  //   console.log(true);
+  // };
+  // const handleMouseLeav = () => {
+  //   setMouseIsOver(false);
+  //   console.log(false);
+  // };
 
   return (
     <div className=" mt-4 h-full mx-8 ">

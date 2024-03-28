@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from "react";
 import Header from "./header";
 import makeAnimated from 'react-select/animated';

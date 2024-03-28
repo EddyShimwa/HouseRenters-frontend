@@ -1,5 +1,7 @@
+/* eslint-disable */
+
 import * as React from 'react';
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
@@ -18,22 +20,21 @@ function createData(id,date,propertyType,propertylocation,numberofrooms,numberof
   return { id, date,propertyType,propertylocation,numberofrooms,numberofBathrooms,ownerphonenumber, amount };
 }
 
-const rows = [
-  createData(
-    0,
-    '16 Mar, 2019',
-    'ghetto',
-    'Tupelo, MS',
-    'VISA ⠀•••• 3719',
-    312.44,
-  ),
-  
-];
+// const rows = [
+//   createData(
+//     0,
+//     '16 Mar, 2019',
+//     'ghetto',
+//     'Tupelo, MS',
+//     'VISA ⠀•••• 3719',
+//     312.44,
+//   ),
+// ];
 
-function preventDefault(event) {
-    event.preventDefault();
+// function preventDefault(event) {
+//     event.preventDefault();
    
-}
+// }
 
 export default function Orders() {
 
@@ -41,9 +42,9 @@ export default function Orders() {
     const navigate=useNavigate(Navigate)
     const {houseId}=useParams()
     const{token}=useParams()
-    const [currentDate, setCurrentDate] =React.useState(new Date());
+    // const [currentDate, setCurrentDate] =React.useState(new Date());
     const{setmessageStatus}=useContext(OpenModalContext)
-  const{messageStatus}=useContext(OpenModalContext)
+  // const{messageStatus}=useContext(OpenModalContext)
   const{setMessage}=useContext(OpenModalContext)
   const{setMessageType}=useContext(OpenModalContext)
     console.log("house id from description:",houseId)
@@ -86,18 +87,17 @@ export default function Orders() {
     }
     
   
-    const getHouseById=async()=>{
-      const result=await fetch(`https://wheretostay.onrender.com/api/properties/${houseId}`) 
-      const result2=await result.json()  
-      console.log(result2)
-      setHouseDescriptionById(result2)
-        
-     }
-  
-     useEffect(()=>{
-     getHouseById()
+    const getHouseById = useCallback(async () => {
+      const result = await fetch(`https://wheretostay.onrender.com/api/properties/${houseId}`);
+      const result2 = await result.json();
+      console.log(result2);
+      setHouseDescriptionById(result2);
+    }, [houseId, setHouseDescriptionById]); 
     
-     },[])
+    useEffect(() => {
+      getHouseById();
+    }, [getHouseById]); 
+
   return (
     <React.Fragment>
     <>

@@ -1,9 +1,10 @@
+/* eslint-disable */
 import React, { useEffect } from "react";
 import AllHouseHeader from "./AllhousesHeader";
 import bodyPic from './Images/Rectangle 1.png'
-import searchIcon from './Images/Vector (9).png'
-import housePic from './Images/Rectangle 2.png'
-import profilePic from './Images/Ellipse 1 (1).png'
+// import searchIcon from './Images/Vector (9).png'
+// import housePic from './Images/Rectangle 2.png'
+// import profilePic from './Images/Ellipse 1 (1).png'
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineHome} from 'react-icons/ai'
@@ -33,8 +34,8 @@ const[typeOfPropertySelected,setTypeOfPropertySelected]=useState("")
 const[BedroomSelected,setBedroomSelected]=useState("")
 const[bathroomSelected,setBathroomSelected]=useState("")
 const[priceRangeAmount,setPriceRangeAmount]=useState("")
-const[filteredArray,setFilteredArray]=useState([])
-const[allHouseToFilter,setAllHouseToFilter]=useState([])
+// const[filteredArray,setFilteredArray]=useState([])
+// const[allHouseToFilter,setAllHouseToFilter]=useState([])
 const {Newtoken}=useParams()
 console.log(priceRangeAmount)
 const handleOpenChat=()=>{
@@ -75,30 +76,30 @@ const handleMouseLeav=()=>{
 
    
     const navigate=useNavigate(Navigate)
-    const handleLocationAccountClick=()=>{
-         setLocationAccountClicked(!LocationaccountClicked)
+    // const handleLocationAccountClick=()=>{
+    //      setLocationAccountClicked(!LocationaccountClicked)
         
-    }
-    const handleTypeOfPropertyAccountClick=()=>{
-      setTypeOfPropertyAccountClicked(!typeOfPropertyaccountClicked)
+    // }
+    // const handleTypeOfPropertyAccountClick=()=>{
+    //   setTypeOfPropertyAccountClicked(!typeOfPropertyaccountClicked)
     
-    }
-    const handleNumberOfBedroomAccountClick=()=>{
-      setbedRoomAccountClicked(!bedRoomaccountClicked)
+    // }
+    // const handleNumberOfBedroomAccountClick=()=>{
+    //   setbedRoomAccountClicked(!bedRoomaccountClicked)
     
-    }
-    const handleNumberOfBathroomAccountClick=()=>{
-      setbathroomAccountClicked(!BathroomaccountClicked)
+    // }
+    // const handleNumberOfBathroomAccountClick=()=>{
+    //   setbathroomAccountClicked(!BathroomaccountClicked)
     
-    }
-    const handlePriceRangeAccount=()=>{
-      setPriceRange(!priceRange)
+    // }
+    // const handlePriceRangeAccount=()=>{
+    //   setPriceRange(!priceRange)
 
-    }
+    // }
 
-    const handleHouseClicked=()=>{
-      navigate('/housedescription')
-    }
+    // const handleHouseClicked=()=>{
+    //   navigate('/housedescription')
+    // }
     useEffect(()=>{
       GetAllHouse()
       GetAllHouseTofilter()
@@ -110,175 +111,15 @@ const handleMouseLeav=()=>{
   const maxPrice = priceRangeAmount!==""&&parseFloat(maxPriceStr.replace(/[^\d.]/g, ''));
   
   const handleFiltering = () => {
-    let filteredResults = allHouse;
+    const filteredResults = allHouse.filter((item) => {
+      const locationMatch = locationSelected === "" || item.city === locationSelected;
+      const propertyTypeMatch = typeOfPropertySelected === "" || item.property_type === typeOfPropertySelected;
+      const bedroomMatch = BedroomSelected === "" || item.number_rooms === BedroomSelected;
+      const bathroomMatch = bathroomSelected === "" || item.number_of_bathrooms === bathroomSelected;
+      const priceMatch = priceRangeAmount === "" || (item.price >= minPrice && item.price <= maxPrice);
   
-    if (locationSelected !== "" && typeOfPropertySelected !== "") {
-      //
-      filteredResults = filteredResults.filter((item) => {
-        return item.city === locationSelected && item.property_type === typeOfPropertySelected;
-      });
-    } 
-     if(locationSelected!=="" && BedroomSelected!==""){
-      filteredResults=filteredResults.filter((item)=>{
-        return item.city===locationSelected&&item.number_rooms==BedroomSelected
-      })
-    }
-     if(locationSelected!=""&&bathroomSelected!==""){
-      filteredResults=filteredResults.filter((item)=>{
-        return item.city===locationSelected&&item.number_of_bathrooms==bathroomSelected
-      })
-    }
-     if(locationSelected!=""&&priceRangeAmount!==""){
-      filteredResults=filteredResults.filter((item)=>{
-        return item.city===locationSelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-     if(locationSelected!="" && typeOfPropertySelected!="" && BedroomSelected!=="")
-    {
-     filteredResults=filteredResults.filter((item)=>{
-        return item.city===locationSelected&&item.property_type===typeOfPropertySelected&&item.number_rooms==BedroomSelected
-     })  
-    }
-    if(locationSelected!=""&&typeOfPropertySelected!=""&&bathroomSelected!=""){
-      filteredResults=filteredResults.filter((item)=>{
-        return item.city===locationSelected&&item.property_type===typeOfPropertySelected&&item.number_of_bathrooms==bathroomSelected
-      })
-    }
-     if(locationSelected!==""&&typeOfPropertySelected!==""&&priceRangeAmount!==""){
-      filteredResults=filteredResults.filter((item)=>{
-        return item.city===locationSelected&&item.property_type===typeOfPropertySelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    if(locationSelected!==""&&BedroomSelected!==""&&bathroomSelected!==""){
-      filteredResults=filteredResults.filter((item)=>{
-      return item.city===locationSelected&&item.number_rooms==BedroomSelected&&item.number_of_bathrooms==bathroomSelected
-      })
-    }
-    if(locationSelected!==""&&BedroomSelected!==""&&priceRangeAmount!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-    return item.city===locationSelected&&item.number_rooms==BedroomSelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    if(locationSelected!==""&&bathroomSelected!==""&&priceRangeAmount!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-   return item.city===locationSelected&&item.number_of_bathrooms==bathroomSelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    if(locationSelected!==""&&typeOfPropertySelected!==""&&BedroomSelected!==""&&bathroomSelected!==""){
-      filteredResults=filteredResults.filter((item)=>{
-        return item.city===locationSelected&&item.property_type===typeOfPropertySelected&&item.number_rooms==BedroomSelected&&item.number_of_bathrooms==bathroomSelected
-      })
-    }
-    if(locationSelected!==""&&typeOfPropertySelected!==""&&BedroomSelected!==""&&priceRangeAmount!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-    return item.city===locationSelected&&item.property_type===typeOfPropertySelected&&item.number_rooms==BedroomSelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    if(locationSelected!==""&&typeOfPropertySelected!==""&&bathroomSelected!==""&&priceRangeAmount!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-   return item.city===locationSelected&&item.property_type===typeOfPropertySelected&&item.number_of_bathrooms==bathroomSelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    if(locationSelected!==""&&typeOfPropertySelected!==""&&BedroomSelected!==""&&bathroomSelected!==""&&priceRangeAmount!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-        return item.city===locationSelected&&item.property_type===typeOfPropertySelected&&item.number_rooms==BedroomSelected&&item.number_of_bathrooms==bathroomSelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    if(typeOfPropertySelected!==""&&BedroomSelected!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-        return item.property_type===typeOfPropertySelected&&item.number_rooms==BedroomSelected
-      })
-    }
-    if(typeOfPropertySelected!==""&&bathroomSelected!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-        return item.property_type===typeOfPropertySelected&&item.number_of_bathrooms==bathroomSelected
-      })
-    }
-    if(typeOfPropertySelected!==""&&priceRangeAmount!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-      return item.property_type===typeOfPropertySelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    if(typeOfPropertySelected!==""&&BedroomSelected!==""&&bathroomSelected!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-     return item.property_type===typeOfPropertySelected&&item.number_rooms==BedroomSelected&&item.number_of_bathrooms==bathroomSelected
-      })
-    }
-    if(typeOfPropertySelected!==""&&BedroomSelected!==""&&priceRangeAmount!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-       return item.property_type===typeOfPropertySelected&&item.number_rooms==BedroomSelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    if(typeOfPropertySelected!==""&&bathroomSelected!==""&&priceRangeAmount!=="")
-    {
-     filteredResults=filteredResults.filter((item)=>{
-      return item.property_type===typeOfPropertySelected&&item.number_of_bathrooms==bathroomSelected&&item.price>=minPrice&&item.price<=maxPrice
-     })
-    }
-    if(typeOfPropertySelected!==""&&BedroomSelected!==""&&bathroomSelected!==""&&priceRangeAmount!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-        return item.property_type===typeOfPropertySelected&&item.number_rooms==BedroomSelected&&item.number_of_bathrooms==bathroomSelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    if(BedroomSelected!==""&&bathroomSelected!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-      return item.number_rooms==BedroomSelected&&item.number_of_bathrooms==bathroomSelected
-      })
-    }
-    if(BedroomSelected!==""&&priceRangeAmount!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-      return item.number_rooms==BedroomSelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    if(BedroomSelected!==""&&bathroomSelected!==""&&priceRangeAmount!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-    return item.number_rooms==BedroomSelected&&item.number_of_bathrooms==bathroomSelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    if(bathroomSelected!==""&&priceRangeAmount!=="")
-    {
-      filteredResults=filteredResults.filter((item)=>{
-      return item.number_of_bathrooms==bathroomSelected&&item.price>=minPrice&&item.price<=maxPrice
-      })
-    }
-    
-    
-    else {
-     
-      if (locationSelected !== "") {
-        filteredResults = filteredResults.filter((item) => item.city === locationSelected);
-      }
-  
-      if (typeOfPropertySelected !== "") {
-        filteredResults = filteredResults.filter((item) => item.property_type === typeOfPropertySelected);
-      }
-  
-      if (BedroomSelected !== "") {
-        filteredResults = filteredResults.filter((item) => item.number_rooms === BedroomSelected);
-      }
-  
-      if (bathroomSelected !== "") {
-        filteredResults = filteredResults.filter((item) => item.number_of_bathrooms === bathroomSelected);
-      }
-  
-      if (priceRangeAmount !== "") {
-        filteredResults = filteredResults.filter((item) => item.price >= minPrice && item.price <= maxPrice);
-      }
-    }
+      return locationMatch && propertyTypeMatch && bedroomMatch && bathroomMatch && priceMatch;
+    });
   
     return filteredResults;
   };

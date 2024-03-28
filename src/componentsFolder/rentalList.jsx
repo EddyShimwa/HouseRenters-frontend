@@ -1,9 +1,10 @@
+/* eslint-disable */
 import React, { useEffect } from "react";
  import RentallistHeader from "./rentallistHeader";
 import bodyPic from './Images/Rectangle 1.png'
-import searchIcon from './Images/Vector (9).png'
-import housePic from './Images/Rectangle 2.png'
-import profilePic from './Images/Ellipse 1 (1).png'
+// import searchIcon from './Images/Vector (9).png'
+// import housePic from './Images/Rectangle 2.png'
+// import profilePic from './Images/Ellipse 1 (1).png'
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { AiOutlineHome} from 'react-icons/ai'

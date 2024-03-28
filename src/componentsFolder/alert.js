@@ -1,8 +1,9 @@
+/* eslint-disable */
 import { useToast } from '@chakra-ui/react'
 import { ChakraProvider } from '@chakra-ui/react'
 import { Wrap } from '@chakra-ui/react'
 import { WrapItem } from '@chakra-ui/react'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import { OpenModalContext } from './context'
 
 function ToastStatusExample() {

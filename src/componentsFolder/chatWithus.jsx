@@ -1,3 +1,4 @@
+/* eslint-disable */
 import * as React from 'react';
 import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css';

@@ -1,38 +1,39 @@
+/* eslint-disable */
 import React, { useEffect } from "react";
-import Header from "./header";
-import makeAnimated from 'react-select/animated';
+// import Header from "./header";
+// import makeAnimated from 'react-select/animated';
 import Select from "react-select";
 
 import logo from "./Images/logo.png";
-import homelogo from "./Images/homelogo.png";
+// import homelogo from "./Images/homelogo.png";
 import dashboardlogo from "./Images/dashlogo.png";
-import addnewrentallogo from "./Images/dashboardLogo.png";
+// import addnewrentallogo from "./Images/dashboardLogo.png";
 import logoutlogo from "./Images/logoutlogo.png";
 import profilePhoto from "./Images/accountOwner.png";
-import locationlogo from "./Images/location.png";
-import apartmentlogo from "./Images/apartmentlogo.png";
-import bedroomlogo from "./Images/bedroomlogo.png";
-import bathroomlogo from "./Images/bathroomlogo.png";
-import Chart from "react-apexcharts";
-import houseImage from "./Images/house0.png";
+// import locationlogo from "./Images/location.png";
+// import apartmentlogo from "./Images/apartmentlogo.png";
+// import bedroomlogo from "./Images/bedroomlogo.png";
+// import bathroomlogo from "./Images/bathroomlogo.png";
+// import Chart from "react-apexcharts";
+// import houseImage from "./Images/house0.png";
 import { useState } from "react";
-import { AiOutlineHome } from "react-icons/ai";
-import { MdBedroomParent, MdBathroom } from "react-icons/md";
-import imglogo from "./Images/imglogo.png";
+// import { AiOutlineHome } from "react-icons/ai";
+// import { MdBedroomParent, MdBathroom } from "react-icons/md";
+// import imglogo from "./Images/imglogo.png";
 import { useContext } from "react";
 import { OpenModalContext } from "./context";
 import { useLocation, useParams } from "react-router-dom";
-import { AdvancedImage } from "@cloudinary/react";
-import { Cloudinary } from "@cloudinary/url-gen";
-import { Image, Transformation, CloudinaryContext } from "cloudinary-react";
+// import { AdvancedImage } from "@cloudinary/react";
+// import { Cloudinary } from "@cloudinary/url-gen";
+// import { Image, Transformation, CloudinaryContext } from "cloudinary-react";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
-import Cookies from "js-cookie";
+// import { Link } from "react-router-dom";
+// import Cookies from "js-cookie";
 import { AiOutlineCloudUpload } from "react-icons/ai";
 import { BsFillImageFill } from "react-icons/bs";
-import { FaLocationArrow } from "react-icons/fa";
-import { color } from "@cloudinary/url-gen/qualifiers/background";
+// import { FaLocationArrow } from "react-icons/fa";
+// import { color } from "@cloudinary/url-gen/qualifiers/background";
 import "../App.css";
 
 
@@ -49,9 +50,9 @@ const AddnewRental = () => {
   const [imageURL4, setImageURL4] = useState("");
   const [imageURL5, setImageURL5] = useState("");
   const [streetAddress, setStreetAddress] = useState("");
-  const [Status, setStatus] = useState("");
+  // const [Status, setStatus] = useState("");
   const [city, setCity] = useState("");
-  const [sector, setSector] = useState("");
+  // const [sector, setSector] = useState("");
   const [propertyType, setPropertyType] = useState("");
   const [numberOfBedroom, setNumberOfBedroom] = useState(0);
   const [numberofBoothroom, setNumberOfBoothRoom] = useState(0);
@@ -59,12 +60,12 @@ const AddnewRental = () => {
   const [DescriptionOfProperty, setDescriptionOfProperty] = useState("");
   const [wordCount, setWordCount] = useState(0);
   const { setmessageStatus } = useContext(OpenModalContext);
-  const { messageStatus } = useContext(OpenModalContext);
+  // const { messageStatus } = useContext(OpenModalContext);
   const [selectedAmenities, setSelectedAmenities] = useState([]);
 
   const { setMessage } = useContext(OpenModalContext);
   const { setMessageType } = useContext(OpenModalContext);
-  const [loading, setLoading] = useState(false);
+  // const [loading, setLoading] = useState(false);
   const [IsImageUploaded, setIsImageUploaded] = useState(false);
   const [IsImageUploaded2, setIsImageUploaded2] = useState(false);
   const [IsImageUploaded3, setIsImageUploaded3] = useState(false);

@@ -5,7 +5,7 @@ import Login from "./componentsFolder/login";
 import Signup from "./componentsFolder/signup";
 import { OpenModalContext } from "./componentsFolder/context";
 import React from "react";
-import Chat from "./componentsFolder/chat";
+// import Chat from "./componentsFolder/chat";
 import ChatWithUs from "./componentsFolder/chatWithus";
 import { useState } from "react";
 import LandLoadDashboard from "./componentsFolder/landLoadDashBoard";

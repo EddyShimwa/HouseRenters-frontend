@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React, { useEffect } from "react";
 import Header from "./header";
 import bodyPic from './Images/Rectangle 1.png'

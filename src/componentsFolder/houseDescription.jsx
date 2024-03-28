@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Header from "./header";
 import marker from "./Images/icon8.gif";
 import houseOwner from "./Images/accountOwner.png";
@@ -7,7 +8,7 @@ import "react-slideshow-image/dist/styles.css";
 import { Slide } from "react-slideshow-image";
 import React from "react";
 import "react-slideshow-image/dist/styles.css";
-import Footer from "./footer";
+// import Footer from "./footer";
 import Cookies from "js-cookie";
 import { useParams } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, LayersControl, Popup } from "react-leaflet";

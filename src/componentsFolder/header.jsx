@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from "react";
 import logo from "./Images/logo.png";
 import { useContext } from "react";

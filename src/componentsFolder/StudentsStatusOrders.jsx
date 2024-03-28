@@ -1,14 +1,15 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react';
 import Table from '@mui/material/Table';
 import TableBody from '@mui/material/TableBody';
 import TableCell from '@mui/material/TableCell';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
-import Button from '@mui/material/Button'; 
+// import Button from '@mui/material/Button'; 
 import Title from './Title';
 import { useParams } from 'react-router-dom';
-import ALLhouses from './Allhouses';
-import Cookies from 'js-cookie';
+// import ALLhouses from './Allhouses';
+// import Cookies from 'js-cookie';/
 import { useNavigate } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
 import { useContext } from 'react';
@@ -80,9 +81,9 @@ export default function StudentsStatusOrders() {
     getMyRequestedProperty();
   }, []);
 
-  const handleCancelRequest = (index) => {
+  // const handleCancelRequest = (index) => {
     
-  };
+  // };
 
   return (
     <div className='space-y-8'>

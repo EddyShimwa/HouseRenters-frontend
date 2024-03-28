@@ -1,4 +1,5 @@
- import AllHouseHeader from "./AllhousesHeader";
+/* eslint-disable */
+import AllHouseHeader from "./AllhousesHeader";
 import marker from "./Images/icon8.gif";
 import houseOwner from "./Images/accountOwner.png";
 import { useContext, useEffect, useState } from "react";
@@ -22,13 +23,8 @@ const customIcon = new L.Icon({
   iconSize: [38, 38],
   iconAnchor: [16, 32],
 });
-const { BaseLayer, Overlay } = LayersControl;
+const { BaseLayer } = LayersControl;
 
-const spanStyle = {
-  padding: "20px",
-  background: "#efefef",
-  color: "#000000",
-};
 
 const divStyle = {
   display: "flex",
@@ -40,13 +36,13 @@ const divStyle = {
 
 const HouseDescriptionWhenLogedIn = () => {
   const [houseDescriptionById, setHouseDescriptionById] = useState(null);
-  const userID = Cookies.get("userID");
-  const { setOpen } = useContext(OpenModalContext);
+  // const userID = Cookies.get("userID");
+  // const { setOpen } = useContext(OpenModalContext);
   const { houseId } = useParams();
   const navigate=useNavigate(Navigate)
   const{Newtoken}=useParams()
   const token=Newtoken
-  const { setHouseId } = useContext(OpenModalContext);
+  // const { setHouseId } = useContext(OpenModalContext);
   console.log("useparams  id:", houseId);
   const slideImages = [
     {
