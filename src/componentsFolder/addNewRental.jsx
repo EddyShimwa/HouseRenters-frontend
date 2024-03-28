@@ -65,7 +65,7 @@ const AddnewRental = () => {
 
   const { setMessage } = useContext(OpenModalContext);
   const { setMessageType } = useContext(OpenModalContext);
-  // const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [IsImageUploaded, setIsImageUploaded] = useState(false);
   const [IsImageUploaded2, setIsImageUploaded2] = useState(false);
   const [IsImageUploaded3, setIsImageUploaded3] = useState(false);
