@@ -100,13 +100,28 @@
     background-image: url('./componentsFolder/Images/bg.jpg');
     background-position: center;
     background-size: cover;
-    filter: blur(4px);
+    filter: blur(1px);
     z-index: -1;
   }
-
+.textdiv{
+  border: 1px solid hsl(0, 0%, 10%);
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  opacity: 0.2;
+}
   .font-poppins {
     font-family: 'Poppins', sans-serif;
   }
+
+  .mytext {
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    opacity: 1;
+  }
+
   
   @keyframes fade-in {
     0% {

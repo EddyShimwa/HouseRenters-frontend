@@ -89,7 +89,7 @@ const Header = () => {
       <div className="flex items-center">
       <span className="text-blue-500 text-xl font-bold mt-3 -mr-3">Scholarz</span>
 <img src={logo} alt="" className="w-14 mx-2" />
-<span className="text-blue-500 text-xl font-bold -ml-5 mt-3">Nid</span>
+<span className="text-blue-500 text-xl font-bold -ml-4 mt-3">Nid</span>
 </div>
         <div>
           <div className="flex space-x-6 justify-center items-center">

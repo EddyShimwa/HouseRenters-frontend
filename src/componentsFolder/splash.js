@@ -16,16 +16,18 @@ const SplashPage = () => {
       className="splash-page h-screen flex flex-col items-center justify-center "
     >
   <div className="flex items-center mb-2">
-  <h2 className="text-8xl text-white mr-1 font-bold mt-6">SCHOLARZ</h2>
+  <h2 className="text-6xl text-white mr-1 font-bold mt-8 ">SCHOLARZ</h2>
   <img src={logo} alt="Logo" className="mx-2" />
-  <h2 className="text-8xl text-white ml-1 font-bold mt-6">NID</h2>
+  <h2 className="text-6xl text-white -ml-4 font-bold mt-8">NID</h2>
 </div>
       <h1 className="text-6xl text-white mb-8 font-bold">
         House Renting Made <span style={{ color: '#2dbcfa' }}>Easy</span>!
       </h1>
-      <h4 style={{ color: 'white', fontSize: '1.5rem', textAlign: 'center', maxWidth: '50%', margin: '0 auto', color: "#ededed" }}>
-        Unlock a world of possibilities and convenience in house hunting with our simplified renting solutions.
-      </h4>
+      <div className="textdiv" style={{ maxWidth: '50%', margin: '0 auto' }}>
+  <h4 className="mytext">
+    Unlock a world of possibilities and convenience in house hunting with our simplified renting solutions.
+  </h4>
+</div>
       <button 
         className="bg-white text-blue-500 py-2 px-4 rounded-full text-xl font-bold mt-8"
         onClick={navigateToHome}
