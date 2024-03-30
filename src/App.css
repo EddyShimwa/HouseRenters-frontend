@@ -104,12 +104,14 @@
     z-index: -1;
   }
 .textdiv{
-  border: 1px solid hsl(0, 0%, 10%);
-  background-color: #000000;
+  border: 1px solid hsla(219, 75%, 66%, 0.266);
+  background-color: #3f83f8c8;
   border-radius: 10px;
   padding: 10px;
   margin: 10px;
-  opacity: 0.2;
+  opacity: 2;
+  fill-opacity: 2;
+  stroke-opacity: 2;
 }
   .font-poppins {
     font-family: 'Poppins', sans-serif;
@@ -117,9 +119,13 @@
 
   .mytext {
     font-size: 1.5rem;
-    color: rgb(255, 255, 255);
+    color: white;
     text-align: center;
     opacity: 1;
+  }
+  .get-started {
+    background-color: #3f83f8;
+    color: rgb(255, 255, 255);
   }
 
   
