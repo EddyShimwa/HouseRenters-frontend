@@ -14,27 +14,29 @@ import { useContext } from 'react';
 import { OpenModalContext } from './context';
 import { useNavigate } from 'react-router-dom';
 import { Navigate } from 'react-router-dom';
+import { useCallback } from 'react';
+import { useState } from 'react';
 
 // Generate Order Data
 function createData(id,date,propertyType,propertylocation,numberofrooms,numberofBathrooms, ownerphonenumber,amount) {
   return { id, date,propertyType,propertylocation,numberofrooms,numberofBathrooms,ownerphonenumber, amount };
 }
 
-// const rows = [
-//   createData(
-//     0,
-//     '16 Mar, 2019',
-//     'ghetto',
-//     'Tupelo, MS',
-//     'VISA ⠀•••• 3719',
-//     312.44,
-//   ),
-// ];
+const rows = [
+  createData(
+    0,
+    '16 Mar, 2019',
+    'ghetto',
+    'Tupelo, MS',
+    'VISA ⠀•••• 3719',
+    312.44,
+  ),
+];
 
-// function preventDefault(event) {
-//     event.preventDefault();
+function preventDefault(event) {
+    event.preventDefault();
    
-// }
+}
 
 export default function Orders() {
 
@@ -42,9 +44,9 @@ export default function Orders() {
     const navigate=useNavigate(Navigate)
     const {houseId}=useParams()
     const{token}=useParams()
-    // const [currentDate, setCurrentDate] =React.useState(new Date());
+    const [currentDate, setCurrentDate] =React.useState(new Date());
     const{setmessageStatus}=useContext(OpenModalContext)
-  // const{messageStatus}=useContext(OpenModalContext)
+  const{messageStatus}=useContext(OpenModalContext)
   const{setMessage}=useContext(OpenModalContext)
   const{setMessageType}=useContext(OpenModalContext)
     console.log("house id from description:",houseId)

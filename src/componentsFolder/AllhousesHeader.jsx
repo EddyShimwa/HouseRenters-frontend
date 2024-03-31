@@ -8,6 +8,7 @@ import { OpenModalContext } from "./context";
 import { useNavigate } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import { useCallback } from "react";
 const AllHouseHeader = () => {
   const [accountClicked, setAccountClicked] = useState(false);
   const { setOpenLogin } = useContext(OpenModalContext);
@@ -73,7 +74,7 @@ const AllHouseHeader = () => {
     <div className=" mt-4 h-full mx-8 ">
       <div className="  flex-1 flex  justify-between  mx-8">
         <div>
-          <img src={logo} alt="" />
+          <img src={logo} alt="" style={{ width: "70px" }} />
         </div>
         <div>
           <div className=" flex space-x-6 justify-center items-center">

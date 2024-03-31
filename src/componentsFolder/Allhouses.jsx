@@ -34,8 +34,8 @@ const[typeOfPropertySelected,setTypeOfPropertySelected]=useState("")
 const[BedroomSelected,setBedroomSelected]=useState("")
 const[bathroomSelected,setBathroomSelected]=useState("")
 const[priceRangeAmount,setPriceRangeAmount]=useState("")
-// const[filteredArray,setFilteredArray]=useState([])
-// const[allHouseToFilter,setAllHouseToFilter]=useState([])
+const[filteredArray,setFilteredArray]=useState([])
+const[allHouseToFilter,setAllHouseToFilter]=useState([])
 const {Newtoken}=useParams()
 console.log(priceRangeAmount)
 const handleOpenChat=()=>{
@@ -207,8 +207,6 @@ const handleMouseLeav=()=>{
             <option  value="kicukiro"  class="text-black   rounded-lg  px-5  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><span  className=" font-txtFontFamily text-txtbodyFontsize font-txtbodyFontWeight leading-txtbodylineHeight tracking-txtbodyLetterspacing ">Kicukiro</span></option>
             <option   value="nyarugenge"  class="text-black   rounded-lg  px-5  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button"><span  className=" font-txtFontFamily text-txtbodyFontsize font-txtbodyFontWeight leading-txtbodylineHeight tracking-txtbodyLetterspacing ">Nyarugenge</span></option>
            </select> 
-  
-
             </div>
         </div>
         <div>
@@ -222,8 +220,6 @@ const handleMouseLeav=()=>{
             <option  value="home" class="text-black   rounded-lg  px-5  text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" ><span  className=" font-txtFontFamily text-txtbodyFontsize font-txtbodyFontWeight leading-txtbodylineHeight tracking-txtbodyLetterspacing ">Home House</span></option>         
            </select>        
             </div> 
-
-
             </div>
         </div>
         <div>

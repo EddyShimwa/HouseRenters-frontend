@@ -171,7 +171,7 @@ const HandleRequestPayment= async (e) => {
     return(
         <div className=" h-full  pl-32">
             <div className=" ml-10 mt-5">
-                <img src={logo} alt="" />
+                <img src={logo} style={{width: '80px'}} alt="" />
             </div>
             <div className="ml-10 mt-5">
             <img style={{width:"7%"}} className=" " src={back} alt="" />
@@ -259,7 +259,7 @@ const HandleRequestPayment= async (e) => {
                             </span>
                         </div>
     
-                        </div>):(  <span style={{fontFamily:"Poppins",fontSize:"30px",lineHeight:"45px",color:"#01499B"}}>Choose your  payment Method
+                        </div>):(  <span style={{fontFamily:"Poppins",fontSize:"30px",lineHeight:"45px",color:"#01499B"}}>Choose your payment Method
             and make your Payment now!</span>)
                   }
                 </div>
