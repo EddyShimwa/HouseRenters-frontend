@@ -352,7 +352,7 @@ const handleMouseLeav=()=>{
     <img className="brightness-50 h-[200px] w-[1250px] " src={bodyPic} alt="" />
 
     <div className="w-full inset-x-0   top-16  absolute flex justify-center items-center">
-      <span className="text-center font-txtFontFamily text-txtFontSize font-headerFontWeight leading-txtlineHeight tracking-txtLetterSpacing text-white mt-[-88px]">Find your dream rental in Kigali</span>
+      <span className="text-center font-txtFontFamily text-txtFontSize font-headerFontWeight leading-txtlineHeight tracking-txtLetterSpacing text-white mt-[-88px]">Find your dream rental arround your Campus </span>
      </div>
 
      <div className=" text-white inset-x-0  bottom-28 absolute w-full mt-40">
